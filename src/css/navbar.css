@@ -1,0 +1,21 @@
+.nav-bar{
+    background-color: rgba(34, 16, 16, 0.363);
+    margin: 0px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+}
+.nav-links>h3{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+}
+.nav-head{
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}

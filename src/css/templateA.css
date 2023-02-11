@@ -1,0 +1,11 @@
+.t1-body>* {
+    color: black;
+    padding-left: 4px;
+}
+.t1-body{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.t1-title{
+    font-family: 'Courier New', Courier, monospace;
+}
