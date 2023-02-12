@@ -1,6 +1,6 @@
 const PreviewTemplateB =  ({resumeData}) => {
   const {name,address,skills,careerObjective,academics} = resumeData
-  const careerObjectiveLines = careerObjective.split('\n')
+  const careerObjectiveLines = careerObjective?.split('\n') ?? []
   return (
     <div className='t2-body'>
       <h6 className='t2-name' >{name}</h6>
