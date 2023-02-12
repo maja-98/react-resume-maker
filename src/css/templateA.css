@@ -1,9 +1,11 @@
 .t1-body>* {
     color: black;
+    margin: 0px;
+    padding: 0px;
     padding-left: 4px;
 }
 .t1-body{
-    height: 100%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
 }
 .t1-title{

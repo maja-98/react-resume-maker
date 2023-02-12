@@ -1,4 +1,12 @@
+.t3-body>* {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 4px;
+}
 .t3-body {
-    height: 100%;
+    margin: 0px;
+    width: 100%;
     background-color: black;
+        padding: 0px;
+        padding-left: 4px;
 }

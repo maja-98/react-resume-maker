@@ -3,16 +3,28 @@ import TemplateA from '../resume-templates/TemplateA'
 import TemplateB from '../resume-templates/TemplateB'
 import TemplateC from '../resume-templates/TemplateC'
 import {CaretLeft, CaretRight} from 'react-bootstrap-icons'
+import ReactToPdf from "react-to-pdf";
+import { useRef } from 'react'
 
 const templateCount = 3
 const firstState = Array.from({length:templateCount},()=>false)
 firstState[0]=true
-
+const ref = React.createRef();
 
 
 const Resume = ({resumeData}) => {
-
+    const mainResumeRef = useRef()
     const [templateDisplayFls,setTemplateDisplayFls] = useState(firstState)
+
+    const toggleMainResumeDisplay = ()=>{
+        if (mainResumeRef.current.style.display==='flex' ){
+            mainResumeRef.current.style.display='none'
+        }
+        else{
+            mainResumeRef.current.style.display='flex'
+            mainResumeRef.current.style.flexDirection='column'
+        }
+    }
     const handleTemplateDisplayFls = (direction) => {
         
         setTemplateDisplayFls((prevState) => {
@@ -35,15 +47,33 @@ const Resume = ({resumeData}) => {
     }
   return (
     <div className='template-container'>
-        <div className='template-display'>
-            {templateDisplayFls[0] && <TemplateA resumeData={resumeData}/>}
-            {templateDisplayFls[1] && <TemplateB resumeData={resumeData}/>}
-            {templateDisplayFls[2] && <TemplateC resumeData={resumeData}/>}
+        <div className='template-display' >
+            {templateDisplayFls[0] && <TemplateA   resumeData={resumeData}/>}
+            {templateDisplayFls[1] && <TemplateB   resumeData={resumeData}/>}
+            {templateDisplayFls[2] && <TemplateC  resumeData={resumeData}/>}
         </div>
+
         <div className='template-selector-arrow-container'>
             <button onClick={()=>{handleTemplateDisplayFls('prev')}}><CaretLeft/></button>
             <button onClick={()=>{handleTemplateDisplayFls('next')}}><CaretRight/></button>
         </div>
+        <button onClick={toggleMainResumeDisplay} className='gen-resume-button'>Generate Resume</button>
+        <div id='template-og-container' ref={mainResumeRef}>
+            <div id='template-og'  ref={ref}>
+                {templateDisplayFls[0] && <TemplateA  resumeData={resumeData}/>}
+                {templateDisplayFls[1] && <TemplateB    resumeData={resumeData}/>}
+                {templateDisplayFls[2] && <TemplateC   resumeData={resumeData}/>}
+            </div>
+            <div className='flex-row resume-btn-container'>
+                <ReactToPdf targetRef={ref} x={0} y={0} scale={1.753} filename="resume.pdf">
+                    {({ toPdf }) => <button onClick={toPdf}>Download PDF</button>}
+                </ReactToPdf>
+                <button onClick={toggleMainResumeDisplay} >Close</button>
+
+            </div>
+
+        </div>
+
 
     </div>
   )

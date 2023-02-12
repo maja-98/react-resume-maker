@@ -1,4 +1,11 @@
+.t2-body>* {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 4px;
+}
 .t2-body {
-    height: 100%;
+    width: 100%;
     background-color: green;
+
+
 }
