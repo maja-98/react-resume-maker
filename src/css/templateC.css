@@ -1,12 +1,24 @@
+
+
 .t3-body>* {
+    color: rgb(255, 255, 255);
     margin: 0px;
-    padding: 0px;
-    padding-left: 4px;
+
 }
+
 .t3-body {
-    margin: 0px;
-    width: 100%;
-    background-color: black;
-        padding: 0px;
-        padding-left: 4px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px;
+}
+
+.t3-title {
+    color: brown;
+}
+
+.t3-name {
+    border-bottom: 1px solid;
+}
+
+.t3-bullets {
+    margin-left: 20px;
 }

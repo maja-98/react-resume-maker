@@ -9,7 +9,7 @@
 }
 .template-display >div{
     width: 500px;
-    height: 450px;
+    height: 400px;
     overflow-y: scroll;
     overflow-x:hidden;
     margin: 5px;
@@ -44,8 +44,9 @@
     aspect-ratio: 8.26/11.69;
     
 }
-#template-og>div{
-    aspect-ratio: 8.26/11.69;
+#template-og>iframe{
+    width: 800px;
+    height: 650px;
 }
 
 .gen-resume-button{

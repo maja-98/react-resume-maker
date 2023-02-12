@@ -1,13 +1,23 @@
+@font-face {
+    font-family: Test;
+    src: url(../fonts/NatureBeautyPersonalUse-9Y2DK.ttf);
+}
 .t1-body>* {
     color: black;
     margin: 0px;
-    padding: 0px;
-    padding-left: 4px;
+
 }
 .t1-body{
-    width: 100%;
     background-color: rgb(255, 255, 255);
+    margin: 3px;
 }
 .t1-title{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Test;
+    color: blue;
+}
+.t1-name{
+    border-bottom: 1px solid;
+}
+.t1-bullets{
+    margin-left: 20px;
 }

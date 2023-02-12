@@ -1,11 +1,28 @@
-.t2-body>* {
-    margin: 0px;
-    padding: 0px;
-    padding-left: 4px;
+@font-face {
+    font-family: Test;
+    src: url(../fonts/NatureBeautyPersonalUse-9Y2DK.ttf);
 }
+
+.t2-body>* {
+    color: rgb(255, 255, 255);
+    margin: 0px;
+
+}
+
 .t2-body {
-    width: 100%;
-    background-color: green;
+    background-color: rgb(96, 3, 3);
+    margin: 3px;
+}
 
+.t2-title {
+    font-family: Test;
+    color: rgb(24, 203, 203);
+}
 
+.t2-name {
+    border-bottom: 1px solid;
+}
+
+.t2-bullets {
+    margin-left: 20px;
 }
